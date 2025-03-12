@@ -6,6 +6,7 @@ function createBubble() {
     bubble.style.width = `${size}px`;
     bubble.style.height = `${size}px`;
     bubble.style.left = `${Math.random()*7}px`;
+    bubble.style.bottom= "0px";
     bubble.style.animationDuration = `${10}s`;
     
     setTimeout(() => {
@@ -20,12 +21,13 @@ function createBubble2() {
     document.body.appendChild(bubble);
     bubble.style.width = `${size}px`;
     bubble.style.height = `${size}px`;
-    bubble.style.left = `${Math.random()*7+380}px`;
+    bubble.style.right = `${Math.random()*7}px`;
+    bubble.style.bottom= "0px";
     bubble.style.animationDuration = `${10}s`;
     
     setTimeout(() => {
         bubble.remove();
     }, 5000);
 }
-setInterval(createBubble, 1200);
-setInterval(createBubble2, 1200);
+setInterval(createBubble, 2000);
+setInterval(createBubble2, 2000);

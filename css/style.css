@@ -4,9 +4,51 @@
     justify-content: center;
     background-image: url(../img/båt_bakgrund.png);
     background-size: cover;
+}
+
+#wrapper2{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: 100px 0.1fr 1fr 1fr;
+    gap: 20px;
+    background-image: url(../img/havs_backgrund.png);
+    background-size: cover;
+    grid-template-areas:
     
+    "na na na"
+    ". hd ."
+    ". sh ."
+    ". sh ."
+      
+}
 
+#shop{
+    grid-area: sh;
+    display: flex ;
+    gap: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.block{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px
+
+}
+
+.post{
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 20vh;
+    width: 30vw;
+    background-color: rgb(179, 183, 186);
+    opacity: 0.6;
 }
 
 body {
@@ -37,6 +79,12 @@ main{
 
 h1{
     color: #404047;
+}
+
+h2{
+    grid-area: hd;
+    justify-self: center;
+    color: #b9b9c5;
 }
 
 p{
@@ -84,33 +132,20 @@ a{
     padding: 30px;
 }
 
-.bubble {
-    position: absolute;
-    bottom: -50px;
-
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    opacity: 0.6;
-    animation: rise 5s infinite ease-in;
-}
-@keyframes rise {
-    0% {
-        transform: translateY(0);
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateY(-100vh);
-        opacity: 0;
-    }
-}
+/*mobile*/
 
 @media screen and (max-width:532px) {
 
     #wrapper{
         background-position: center;
+        position: relative;
     }
 
     nav{
+        grid-area: na;
+        background-color: rgb(179, 183, 186);
+        opacity: 0.6;
+        border-radius: 10px;
         justify-content: center;
         gap: 10px;
     }
@@ -134,5 +169,23 @@ a{
         align-items: center;
     }
 
+    .bubble {
+        position: absolute;
+    
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        opacity: 0.6;
+        animation: rise 5s infinite ease-in;
+    }
+    @keyframes rise {
+        0% {
+            transform: translateY(0vh);
+            opacity: 0.6;
+        }
+        100% {
+            transform: translateY(-100vh);
+            opacity: 0;
+        }
+    }
 
 }
