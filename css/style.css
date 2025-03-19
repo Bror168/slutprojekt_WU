@@ -9,8 +9,8 @@
 #wrapper2{
     display: grid;
     grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows: 100px 0.1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: 70px 100px 1fr 1fr;
+    gap: 10px;
     background-image: url(../img/havs_backgrund.png);
     background-size: cover;
     grid-template-areas:
@@ -22,34 +22,7 @@
       
 }
 
-#shop{
-    grid-area: sh;
-    display: flex ;
-    gap: 20px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
 
-.block{
-    display: flex ;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px
-
-}
-
-.post{
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-    padding: 10px;
-    height: 20vh;
-    width: 30vw;
-    background-color: rgb(179, 183, 186);
-    opacity: 0.6;
-}
 
 body {
     background-color: #f3f4f6;
@@ -82,9 +55,10 @@ h1{
 }
 
 h2{
-    grid-area: hd;
     justify-self: center;
+    font-size: 2.125rem ;
     color: #b9b9c5;
+    text-align: center;
 }
 
 p{
@@ -96,16 +70,15 @@ p{
     height: 60px;
 
     border: none;
-    color: #f3f4f6;
     padding: 20px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    transition-duration: 0.6s;
+    transition-duration: 0.2s;
 }
 
 .nav:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.44), 0 17px 50px 0 rgba(0,0,0,0.19);
     text-decoration: underline;
     border-radius: 10px;
 }
@@ -143,13 +116,15 @@ a{
 
     nav{
         grid-area: na;
-        background-color: rgb(179, 183, 186);
-        opacity: 0.6;
-        border-radius: 10px;
         justify-content: center;
+
         gap: 10px;
     }
     .nav{
+        border-radius: 10px;
+        background-color: rgba(179, 183, 186, 0.1);
+        border-style: solid;
+        border-color: rgba(185, 185, 197, 0.1);
         height: 30px;
     }
 
@@ -177,6 +152,57 @@ a{
         opacity: 0.6;
         animation: rise 5s infinite ease-in;
     }
+
+    .hed2{
+        grid-area: hd;
+        align-content: center;
+    }
+
+    #shop{
+        grid-area: sh;
+        display: flex ;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .block{
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    
+    }
+    
+    .post{
+        border-style: solid;
+        border-color: rgba(185, 185, 197, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+        height: 30vh;
+        width: 40vw;
+        background-color: rgba(179, 183, 186, 0.2);
+        
+        justify-items: center;
+        align-items: center;
+
+
+    }
+
+    .pp{
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        color: #b9b9c5;
+
+    }
+
+    .shop_img {
+        width: 25vw;
+        object-fit: cover;
+    }
+
     @keyframes rise {
         0% {
             transform: translateY(0vh);
