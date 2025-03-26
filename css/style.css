@@ -38,6 +38,23 @@
       
 }
 
+#wrapper4{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr ;
+    grid-template-rows: 70px 100px 1fr 1fr 1fr;
+    gap: 10px;
+    background-image: url(../img/havs_backgrund.png);
+    background-size: cover;
+    grid-template-areas:
+    
+    "na na na"
+    ". hd ."
+    ". om ."
+    ". om ."
+    ". la ."
+      
+}
+
 
 
 body {
@@ -81,6 +98,10 @@ p{
     color: rgba(240, 248, 255, 0.418);
 }
 
+.svart{
+    color: rgb(40, 44, 46) ;
+}
+
 .nav{
     width: 100px;
     height: 60px;
@@ -113,11 +134,18 @@ a{
     justify-content: space-evenly;
     align-self: center ;
     gap: 100px;
+    ;
 
+}
+
+.margin{
+    margin-top: 20vh;
+    margin-bottom: 10vh;
 }
 
 .bröd{
     word-break: break-all;
+    gap: 100px;
     padding: 30px;
 }
 
@@ -149,7 +177,7 @@ a{
     height: 350px;
     z-index: 1;
     border-radius: 4px;
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 10px 0;
     justify-items: center;
 }
@@ -214,6 +242,7 @@ a{
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        
     }
 
     .bubble {
@@ -297,7 +326,7 @@ a{
 
     /*guids.html*/
     .guide{
-        height: 30vh;
+        height: 32vh;
         width: 90vw;
         border-style: solid;
         border-color: rgba(185, 185, 197, 0.1);
@@ -324,6 +353,32 @@ a{
     }
     #img3{
         background-image: url('/img/propeler.jpg');
+    }
+
+    /*om oss*/
+
+    #om_oss{
+        grid-area: om;
+        display: flex ;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #last{
+        grid-area: la;
+        display: flex ;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .om_bild{
+        height: 25vw;
+        width: 25vw;
+        border-radius: 30vw;
     }
 
 

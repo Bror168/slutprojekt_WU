@@ -53,8 +53,8 @@ function initDropdown({ toggleSelector, menuSelector, activeClassTargetSelector,
     });
 }
 
-setInterval(createBubble, 2000);
-setInterval(createBubble2, 2000);
+setInterval(createBubble, 1000);
+setInterval(createBubble2, 1000);
 
 
 
