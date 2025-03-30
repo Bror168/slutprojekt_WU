@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: column; 
     justify-content: center;
-    background-image: url(../img/båt_bakgrund.png);
+    background-image: url(../img/backgrund_desktop2.png);
     background-size: cover;
+    background-position: center;
 }
 
+
+/*merch.index*/
 #wrapper2{
     display: grid;
     grid-template-columns:1fr 1fr 1fr ;
@@ -17,9 +20,63 @@
     
     "na na na"
     ". hd ."
-    ". sh ."
-    ". sh ."
+    "sh sh sh"
+    "sh sh sh"
       
+}
+
+
+#shop{
+    grid-area: sh;
+    display: flex ;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.block{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+
+}
+
+.post{
+    border-style: solid;
+    border-color: rgba(185, 185, 197, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    height: 40vh;
+    width: 40vw;
+    background-color: rgba(179, 183, 186, 0.2);
+    
+    justify-items: center;
+    align-items: center;
+
+
+}
+
+.post:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.44), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: underline;
+    border-radius: 10px;
+
+}
+
+.pp{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: #b9b9c5;
+
+}
+
+.shop_img {
+    width: 10vw;
+    height: 20vh;
+    object-fit: cover;
 }
 
 #wrapper3{
@@ -38,21 +95,107 @@
       
 }
 
+#guids{
+    grid-area: gu;
+    display: flex ;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide{
+    height: 50vh;
+    width: 30vw;
+    border-style: solid;
+    border-color: rgba(185, 185, 197, 0.1);
+    border-radius: 10px;
+    background-color: rgba(179, 183, 186, 0.2);
+    padding: 10px;
+}
+
+.cover_img{
+    border-radius: 10px 10px 0px 0px ;
+    height: 30vh;
+    width: 30vw;
+    background-size: cover;
+    background-position: center;
+
+    
+}
+
+#img1{
+    background-image: url('/img/bänk1.jpg');
+}
+#img2{
+    background-image: url('/img/hål1.jpg');
+
+}
+#img3{
+    background-image: url('/img/propeler.jpg');
+}
+
 #wrapper4{
     display: grid;
-    grid-template-columns:1fr 1fr 1fr ;
-    grid-template-rows: 70px 100px 1fr 1fr 1fr;
+    grid-template-columns:1fr;
+    grid-template-rows: 70px 100px 1fr;
     gap: 10px;
     background-image: url(../img/havs_backgrund.png);
     background-size: cover;
     grid-template-areas:
     
-    "na na na"
-    ". hd ."
-    ". om ."
-    ". om ."
-    ". la ."
+    "na"
+    "hd"
+    "om"
+    "la"
+   
       
+}
+
+#om_oss{
+    grid-area: om;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+
+.om_bild{
+    height: 10vw;
+    width: 10vw;
+    border-radius: 30vw;
+}
+
+.block2{
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:1vw;
+
+}
+
+.post2{
+    border-style: solid;
+    border-color: rgba(185, 185, 197, 0.1);
+    border-radius: 10px;
+    height: 45vh;
+    width: 23vw;
+    background-color: rgba(179, 183, 186, 0.2);
+    
+    justify-items: center;
+    align-items: center;
+}
+
+#last{
+    grid-area: la;
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -60,23 +203,52 @@
 body {
     background-color: #f3f4f6;
     font-family: Arial, sans-serif;
-    gap: 10px;
 
 }
 
 nav{
+    grid-area: na;
     display: flex;
     flex-direction: row;
     justify-content: end;
     gap: 10px
 }
 
+.nav{
+    width: 100px;
+    height: 60px;
+    align-content: center;
+    border: none;
+    padding: 20px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.2s;
+}
+
+.nav{
+    border-radius: 10px;
+    background-color: rgba(179, 183, 186, 0.1);
+    border-style: solid;
+    border-color: rgba(185, 185, 197, 0.1);
+    height: 30px;
+}
+
+.nav:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.44), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
 header{
-    height: 300px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    margin-bottom: 270px;
+    margin-top: 15px;
+    
 }
 
 main{
@@ -94,6 +266,12 @@ h2{
     text-align: center;
 }
 
+.hed2{
+    grid-area: hd;
+    align-content: center;
+    margin-top: 0px;
+}
+
 p{
     color: rgba(240, 248, 255, 0.418);
 }
@@ -102,23 +280,8 @@ p{
     color: rgb(40, 44, 46) ;
 }
 
-.nav{
-    width: 100px;
-    height: 60px;
 
-    border: none;
-    padding: 20px 30px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition-duration: 0.2s;
-}
 
-.nav:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.44), 0 17px 50px 0 rgba(0,0,0,0.19);
-    text-decoration: underline;
-    border-radius: 10px;
-}
 
 a{
     color: #000;
@@ -173,7 +336,7 @@ a{
     position: absolute;
     background-color: rgba(179, 183, 186, 0.7);
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    width: 90vw;
+    width: 30vw;
     height: 350px;
     z-index: 1;
     border-radius: 4px;
@@ -192,23 +355,33 @@ a{
 .show {
     display: block;
 }
-.dropdown-active #guide_push, .dropdown-active2 #guide_push2 {
-    margin-top: 390px;
+
+
+.bubble {
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: rise 5s infinite ease-in;
 }
 
-.dropdown-active3 #guide_push2{
-    margin-bottom: 390px;
-}
-
-.guide {
-    transition: margin-top 0.3s ease; 
+@keyframes rise {
+    0% {
+        transform: translateY(60vh);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
 }
 
 /*mobile*/
-
 @media screen and (max-width:532px) {
 
     /*index.html*/
+
     #wrapper{
         background-position: center;
         position: relative;
@@ -217,9 +390,9 @@ a{
     nav{
         grid-area: na;
         justify-content: center;
-
         gap: 10px;
     }
+
     .nav{
         border-radius: 10px;
         background-color: rgba(179, 183, 186, 0.1);
@@ -245,21 +418,33 @@ a{
         
     }
 
-    .bubble {
-        position: absolute;
-    
-        background: rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        opacity: 0.6;
-        animation: rise 5s infinite ease-in;
-    }
-
     .hed2{
         grid-area: hd;
         align-content: center;
     }
 
     /*merch.html*/
+
+    #wrapper2{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr ;
+        grid-template-rows: 70px 100px 1fr 1fr;
+        gap: 10px;
+        background-image: url(../img/havs_backgrund.png);
+        background-size: cover;
+        grid-template-areas:
+        
+        "na na na"
+        ". hd ."
+        ". sh ."
+        ". sh ."
+          
+    }
+    
+    .hed2{
+        grid-area: hd;
+        align-content: center;
+    }
 
     #shop{
         grid-area: sh;
@@ -314,6 +499,24 @@ a{
         object-fit: cover;
     }
 
+      /*guids.html*/
+
+    #wrapper3{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr ;
+        grid-template-rows: 70px 100px 1fr 1fr;
+        gap: 10px;
+        background-image: url(../img/havs_backgrund.png);
+        background-size: cover;
+        grid-template-areas:
+        
+        "na na na"
+        ". hd ."
+        ". gu ."
+        ". gu ."
+          
+    }
+    
 
     #guids{
         grid-area: gu;
@@ -324,9 +527,8 @@ a{
         align-items: center;
     }
 
-    /*guids.html*/
     .guide{
-        height: 32vh;
+        height: 35vh;
         width: 90vw;
         border-style: solid;
         border-color: rgba(185, 185, 197, 0.1);
@@ -355,7 +557,42 @@ a{
         background-image: url('/img/propeler.jpg');
     }
 
+    .dropdown-menu, .dropdown-menu2, .dropdown-menu3{
+        width: 90vw;
+    }
+
+    .dropdown-active #guide_push, .dropdown-active2 #guide_push2 {
+        margin-top: 390px;
+    }
+    
+    .dropdown-active3 #guide_push2{
+        margin-bottom: 390px;
+    }
+    
+    .guide {
+        transition: margin-top 0.3s ease; 
+    }
+    
+
+
     /*om oss*/
+
+    #wrapper4{
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr ;
+        grid-template-rows: 70px 100px 1fr 1fr 1fr;
+        gap: 10px;
+        background-image: url(../img/havs_backgrund.png);
+        background-size: cover;
+        grid-template-areas:
+        
+        "na na na"
+        ". hd ."
+        ". om ."
+        ". om ."
+        ". la ."
+          
+    }
 
     #om_oss{
         grid-area: om;
@@ -381,6 +618,23 @@ a{
         border-radius: 30vw;
     }
 
+    .block2{
+        display: flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px
+    
+    }
+    
+    .post2{
+        border-style: solid;
+        border-color: rgba(185, 185, 197, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+        height: 45vh;
+        width: 40vw;
+        background-color: rgba(179, 183, 186, 0.2);
 
     @keyframes rise {
         0% {
