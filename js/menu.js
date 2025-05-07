@@ -7,7 +7,7 @@ function initDropdown({ toggleSelector, menuSelector, activeClassTargetSelector,
         if (!toggleButton || !dropdownMenu || !activeClassTarget) return;
 
         toggleButton.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent click from bubbling to window
+            e.stopPropagation();
             dropdownMenu.classList.toggle('show');
             activeClassTarget.classList.toggle(dropdownActive);
         });
